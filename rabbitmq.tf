@@ -19,7 +19,7 @@ resource "null_resource" "install" {
   connection {
     type     = "ssh"
     user     = "centos"
-    password = DevOps321
+    password = "DevOps321"
     host     = aws_spot_instance_request.rabbitmqdb.private_ip
   }
 
