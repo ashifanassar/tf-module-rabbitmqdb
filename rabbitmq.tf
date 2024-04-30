@@ -18,7 +18,7 @@ resource "null_resource" "install" {
   # generic remote provisioners (i.e. file/remote-exec)
   connection {
     type     = "ssh"
-    user     = "root"
+    user     = "centos"
     password = DevOps321
     host     = aws_spot_instance_request.rabbitmqdb.private_ip
   }
