@@ -12,7 +12,7 @@ data "terraform_remote_state" "vpc" {
 data "aws_ami" "ami" {
 
   most_recent      = true
-  name_regex       = DevOps-LabImage-Centos-8
+  name_regex       = "centos8-with-ansible"
   owners           = ["590183768065"]
 
 }
