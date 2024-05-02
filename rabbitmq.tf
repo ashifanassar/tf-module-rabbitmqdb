@@ -3,7 +3,7 @@ resource "aws_spot_instance_request" "rabbitmqdb" {
   ami                       = data.aws_ami.ami.id
   instance_type             = var.RABBITMQ_INSTANCE_TYPE
   subnet_id                 = data.terraform_remote_state.vpc.outputs.PRIVATE_SUBNET_IDS[0]
-  vpc_security_group_ids    = [aws_security_group.allow_rabbitmq.id]
+  vpc_security_group_ids    = [aws_security_group.allow_rabbitmqdb.id]
   wait_for_fulfillment      = true 
 
   tags = {
