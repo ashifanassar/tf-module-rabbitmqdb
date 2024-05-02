@@ -26,6 +26,6 @@ resource "aws_security_group" "allow_rabbitmqdb" {
   }
 
   tags = {
-    Name = "roboshop-${var.ENV}-rabbitmq-sg"
+    Name = "roboshop-${var.ENV}-rabbitmqdb-sg"
   }
 }
