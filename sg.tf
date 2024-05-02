@@ -1,5 +1,5 @@
 # security groups that allows only ws netwokr and internal network
-resource "aws_security_group" "allow_rabbitmq" {
+resource "aws_security_group" "allow_rabbitmqdb" {
   name                    = "roboshop-${var.ENV}-rabbitmq-sg"
   description             = "roboshop-${var.ENV}-rabbitmq-sg"
   vpc_id                  = data.terraform_remote_state.vpc.outputs.VPC_ID
