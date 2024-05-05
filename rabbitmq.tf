@@ -7,7 +7,7 @@ resource "aws_spot_instance_request" "rabbitmqdb" {
   wait_for_fulfillment      = true 
 
   tags = {
-    Name = "roboshop-${var.ENV}-rabbitmq"
+    Name = "roboshop-${var.ENV}-rabbitmqdb"
   }
 }
 
@@ -25,7 +25,7 @@ resource "null_resource" "install" {
 
   provisioner "remote-exec" {
     inline = [
-      "ansible-pull -U https://github.com/b57-clouddevops/ansible.git -e ENV=dev -e COMPONENT=rabbitmq roboshop-pull.yml"
+      "ansible-pull -U https://github.com/b57-clouddevops/ansible.git -e ENV=dev -e COMPONENT=rabbitmqdb roboshop-pull.yml"
     ]
   }
 }
